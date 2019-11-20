@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>break_eternity.js</title>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/Patashu/break_eternity.js/master/break_eternity.js"></script>
+    <script>
+        document.getElementById("button2").onclick=runInput2()
+        function runInput2() {  
+          var inputs = [input2a.value, input2b.value, input2c.value, input2d.value, input2e.value]
+          doTheThing();
+          output2.innerHTML=eval(input2.value);
+        }
+        function doTheThing(){	
+          document.getElementById("output2").innerHTML=document.getElementById("input2");
+        } 
+    </script>
+    <script>
+      var myTimer = "";
+      document.getElementById("buttonA").onclick=beginLoop()
+        function beginLoop() {
+          runInput2()
+          myTimer = setInterval(runInput2, document.getElementById("input2e").value)
+      }
+      document.getElementById("buttonStop").onclick= function (){
+        clearInterval(myTimer);
+      }
+    </script>
+    <style>
+      * {
+        font-family:monospace;
+      }
+      body{
+        font-size:16px;
+      }
+    </style>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+  </head>	
+  <body>
+    <h1>break_eternity.js</h1>
+    <p>
+      NOTE: This is not mine; this repo belongs to Naruyoko. I forked it because I'm trying to get into programming and I wanted to start by seeing what I could do with this even though that's probably a bad idea lol<br>
+      <br>
+      A Javascript numerical library created by Patashu to represent numbers as large as 10^^1e308 and as 'small' as 10^-(10^^1e308).
+    </p>
+    <p>
+      Input parameters<br>
+      <input type="number" id="input2a" value="4" step="1" placeholder="Hyperoperator" style="width:15%;height:30px;"><input type="number" id="input2b" value="2" step="0.1" placeholder="Base 1" style="width:15%;height:30px;"><input type="number" id="input2c" value="3" step="1" placeholder="Base 2" style="width:15%;height:30px;"><input type="number" id="input2d" value="0.001" step="0.001" placeholder="Auto increment" style="width:15%;height:30px;"><input type="number" id="input2e" value="100" step="10" placeholder="Auto delay" style="width:15%;height:30px;">
+      <br>
+      Arbiturarly code execution();<br>
+      <textarea name="input2" id="input2" style="width:95%;height:100px;">input2b.value=Number(input2b.value)+Number(input2d.value);
+      OmegaNum.hyper(inputs[0])(inputs[1],inputs[2])
+      </textarea>
+      <br>
+      <button id="button2" onclick="runInput2()">Run</button>
+      <br>
+      <button id="buttonA" onclick="beginLoop()">Auto</button>
+      <br>
+      <button id="buttonStop" onclick="clearInterval(myTimer)">Stop</button>
+      <div id="output2">Output(eval()) here</div><br>
+    </p>
+  </body>
+</html>
