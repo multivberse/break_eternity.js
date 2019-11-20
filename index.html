@@ -10,7 +10,7 @@
           output2.innerHTML=eval(input2.value);
         }
         function doTheThing(){	
-          document.getElementById("output2").innerHTML=document.getElementById("input2");
+          document.getElementById("output2").innerHTML=document.getElementById("input2").value;
         } 
     </script>
     <script>
@@ -43,7 +43,7 @@
     </p>
     <p>
       Input parameters (Use "inputs[0-3]")<br>
-      <input type="number" id="input2a" value="1" step="1" placeholder="inputs[0]" style="width:15%;height:30px;"><input type="number" id="input2b" value="1" step="1" placeholder="inputs[1]" style="width:15%;height:30px;"><input type="number" id="input2c" value="1" step="1" placeholder="inputs[2]" style="width:15%;height:30px;"><input type="number" id="input2d" value="1" step="1" placeholder="inputs[3]" style="width:15%;height:30px;">
+      <input type="number" id="input2a" value="1" step="1" placeholder="inputs[0] or input2a" style="width:15%;height:30px;"><input type="number" id="input2b" value="1" step="1" placeholder="inputs[1] or input2b" style="width:15%;height:30px;"><input type="number" id="input2c" value="1" step="1" placeholder="inputs[2] or input2c" style="width:15%;height:30px;"><input type="number" id="input2d" value="1" step="1" placeholder="inputs[3] or input2d" style="width:15%;height:30px;">
       <br>
       Arbiturarly code execution();<br>
       <textarea name="input2" id="input2" style="width:95%;height:100px;">input2b.value=Number(input2b.value)+Number(input2d.value);
