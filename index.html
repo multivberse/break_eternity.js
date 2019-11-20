@@ -5,7 +5,7 @@
     <script>
         document.getElementById("button2").onclick=runInput2()
         function runInput2() {  
-          var inputs = [input2a.value, input2b.value, input2c.value, input2d.value, input2e.value]
+          var inputs = [input2a.value, input2b.value, input2c.value, input2d.value]
           doTheThing();
           output2.innerHTML=eval(input2.value);
         }
@@ -42,8 +42,8 @@
       <b>break_eternity.js</b> is a Javascript numerical library created by Patashu to represent numbers as large as 10^^1e308 and as 'small' as 10^-(10^^1e308).
     </p>
     <p>
-      Input parameters<br>
-      <input type="number" id="input2a" value="4" step="1" placeholder="Hyperoperator" style="width:15%;height:30px;"><input type="number" id="input2b" value="2" step="0.1" placeholder="Base 1" style="width:15%;height:30px;"><input type="number" id="input2c" value="3" step="1" placeholder="Base 2" style="width:15%;height:30px;"><input type="number" id="input2d" value="0.001" step="0.001" placeholder="Auto increment" style="width:15%;height:30px;"><input type="number" id="input2e" value="100" step="10" placeholder="Auto delay" style="width:15%;height:30px;">
+      Input parameters (Use "inputs[0-3]")<br>
+      <input type="number" id="input2a" value="1" step="1" placeholder="inputs[0]" style="width:15%;height:30px;"><input type="number" id="input2b" value="1" step="1" placeholder="inputs[1]" style="width:15%;height:30px;"><input type="number" id="input2c" value="1" step="1" placeholder="inputs[2]" style="width:15%;height:30px;"><input type="number" id="input2d" value="1" step="1" placeholder="inputs[3]" style="width:15%;height:30px;">
       <br>
       Arbiturarly code execution();<br>
       <textarea name="input2" id="input2" style="width:95%;height:100px;">input2b.value=Number(input2b.value)+Number(input2d.value);
@@ -52,7 +52,7 @@
       <br>
       <button id="button2" onclick="runInput2()">Run</button>
       <br>
-      <button id="buttonA" onclick="beginLoop()">Auto</button>
+      <button id="buttonA" onclick="beginLoop()">Auto</button><input type="number" id="input2e" value="100" step="10" placeholder="Delay" style="width:100px;height:30px;">
       <br>
       <button id="buttonStop" onclick="clearInterval(myTimer)">Stop</button>
       <div id="output2">Output(eval()) here</div><br>
